@@ -1,0 +1,15 @@
+<?xml version="1.0">
+
+<questions>
+  <question>
+    <text> Uma instrucao FOR eh uma instrucao basica.</text>
+    <options>
+      <option> Verdadeiro. </option>
+      <option> Falso. </option>
+    </options>
+    <answer> Verdadeiro. </answer>
+  </question>
+  <question>
+    <!-- Outra pergunta com suas opcoes e resposta -->
+  </question>
+</questions>

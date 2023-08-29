@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<link rel="stylesheet" type="text/css" href="mazing.css">
+<link rel="stylesheet" type="text/css" href="drag-drop.css">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<div id="maze_container">
+  <div id="maze" data-steps="60">
+    <div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="door exit"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class="wall"></div>
+    </div>
+    <div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class="wall"></div>
+      <div class=""></div>
+   </div>
+    <div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class="wall"></div>
+      <div class=""></div>
+   </div>
+   <div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class="wall"></div>
+   </div>
+   
+   <div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class=""></div>
+      <div class="wall"></div>
+   </div>
+     <div>
+        <div class="wall"></div>
+        <div class=""></div>
+        <div class="wall"></div>
+        <div class="wall"></div>
+        <div class="wall"></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class="key"></div>
+        <div class="wall"></div>
+        <div class="wall"></div>
+        <div class=""></div>
+        <div class="wall"></div>
+     </div>
+     <div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class="key"></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class="door entrance hero"></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+     </div>
+  </div>
+</div>
+
+<div class="names">
+  <div class="name" draggable="true">Cima</div>
+  <div class="name" draggable="true">Baixo</div>
+  <div class="name" draggable="true">Esquerda</div>
+  <div class="name" draggable="true">Direita</div>
+</div>
+
+<div id="namesTarget" class="target names">
+</div>
+
+<button id="startBuuton" class="sadasdas" onclick="start()">Play</button>
+<button class="sadasdas" onclick="window.location.reload();">Reload</button>
+
+<a href="mazing4.html">
+  <button id="nextButton" class="next-button" onclick="MazeGame.nextPhase()" style="display: none;">Fase 4</button>
+</a>
+<script src="./mazing.js"></script>
+<script src="./drag-drop.js"></script>
+
+<script>
+
+  var Maze, MazeGame;
+
+  const makeMaze = (id, width, height, speech = false) => {
+    MazeGame = new Mazing("maze");
+    if(speech) {
+      MazeGame.enableSpeech();
+    }
+  }
+
+  const start = () => {
+    MazeGame.start();
+  }
+
+  makeMaze("maze_container", 6, 12);
+
+</script>
